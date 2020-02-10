@@ -1,0 +1,54 @@
+<div class="headers">
+    <div  class="headerTab">
+        <div>
+            <div class="saved_list"><i class="fa fa-list"></i>SAVED LISTS</div>
+        </div>
+        <div>
+            <div class="headertab2"><i class="fa fa-filter"> SAVED FILTERS</i></div>
+        </div>
+        <div>
+            <div class="headertab3"><i class="fa fa-history"> SEARCH HISTORY</i></div>
+        </div>
+    </div>
+    <div>
+        <div class="searchBox">
+            <input placeholder="Search" (keyup)="searchByName($event , modifyData)"/>
+         </div>
+    </div>
+</div>
+
+<div class="content">
+   <div class="data-table">
+    <table id="myTable user-list">
+        <thead class="header user-row">
+              <th class="tableHeadersName">Name</th>
+              <th class="tableHeadersName">Type </th>
+              <th class="tableHeadersName">Actions</th>
+              <th class="tableHeadersName"></th>
+        </thead>
+        <tbody class="table-wrapper-scroll-y">
+            <tr *ngFor="let item of tableData" class="user-row tableRow">
+                <td>{{item.name}}</td>
+                <td>{{item.type}}</td>
+                <td><i class="icon fa fa-share"></i>
+                  <i class="icon  fa fa-envelope"></i>
+                  <i class="icon  fa fa-edit"></i>
+                  <i class="icon fa fa-trash"></i>
+                </td>
+                <td class="detailtd"><button (click)="detailcontent()" type="button" class="detailsBtn">Details</button></td>
+               </tr>
+        </tbody>
+    </table>
+   </div>
+
+   <div class="detail">
+       <div>
+           <div class="detailHead">
+               <p> NO description yet <span class="add"> +Add Description</span></p>
+           </div>
+           <div>
+             <p *ngFor="let item of contentDetail" class="detailP">{{item}}</p>
+           </div>
+       </div>
+   </div>
+</div>
