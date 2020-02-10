@@ -1,5 +1,8 @@
 # PrivateCircle
 
+Locally this application will work on this Url http://localhost:4200/table/show.
+In the table you can search globally.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
 ## Development server
